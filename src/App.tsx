@@ -16,7 +16,7 @@ const posts = [
     
     content:[
             {type: "paragraph", content: "Fala galeraa 👋"},
-            {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"},
+            {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no Ignite, BootCamp da Rocketseat. O nome do projeto é Ignite Feed 🚀"},
             {type: "link", content: "jane.design/doctorcare"}
     ],
 
@@ -34,7 +34,7 @@ const posts = [
     
     content:[
             {type: "paragraph", content: "Fala galeraa 👋"},
-            {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"},
+            {type: "paragraph", content: "React e Typescript são a minha Stack preferida! 🚀"},
             {type: "link", content: "jane.design/doctorcare"}
     ],
 
@@ -55,9 +55,7 @@ function App() {
                 return (
                   <Post
                     key={post.id}
-                    author={post.author}
-                    content={post.content}
-                    publishedAt={post.publishedAt}
+                    post={post}
                   />
                 )
             })
