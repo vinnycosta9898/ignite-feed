@@ -1,4 +1,8 @@
-import { useState, ChangeEvent, InvalidEvent, FormEvent } from 'react';
+import { useState, 
+         ChangeEvent, 
+         InvalidEvent, 
+         FormEvent 
+        } from 'react';
 
 import { Comment } from '../Comment';
 import { Avatar } from '../Avatar';
