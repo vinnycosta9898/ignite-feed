@@ -12,6 +12,7 @@ interface CommentProps{
 export function Comment({ content, onDeleteComment } : CommentProps){
 
     const [likeCount, setLikeCount] = useState(0);
+    const [liked, setLiked] = useState(false);
 
     function handleDeleteComment(){
         onDeleteComment(content);
@@ -21,6 +22,14 @@ export function Comment({ content, onDeleteComment } : CommentProps){
         setLikeCount((state) => {
             return state + 1 
         })
+        setLiked(true)
+    }
+
+    function handleDeslikeComment(){
+        setLikeCount((state) => {
+            return state - 1
+        })
+        setLiked(false)
     }
 
     return(
@@ -54,7 +63,7 @@ export function Comment({ content, onDeleteComment } : CommentProps){
                 </div>
 
                 <footer>
-                    <button onClick={handleLikeComment}>
+                    <button onClick={liked ? handleDeslikeComment : handleLikeComment}>
                         <ThumbsUp/>
                         Aplaudir <span>{likeCount}</span>
                     </button>
